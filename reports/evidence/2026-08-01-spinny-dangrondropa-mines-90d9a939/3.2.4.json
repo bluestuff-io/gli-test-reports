@@ -1,0 +1,87 @@
+{
+  "reportEngine": "spinny",
+  "standard": "GLI-19 v3.0",
+  "runId": "90d9a939-9935-4be8-a03d-2c52a2ac9531",
+  "clauseId": "3.2.4",
+  "verdict": "PASS",
+  "plainStatement": "Independence of the shared RNG (serial, overlaps, interplay) and of each engine's per-round outcomes (none playable). 3 of the 7 tests named in §3.2.2 applied. None rejected at the 99% family-wise confidence level (Holm–Bonferroni; Fisher combined p = 3.942e-1).",
+  "headlineStatistic": 13.639501607552065,
+  "pValue": 0.19007905512886206,
+  "confidenceLevel": 0.99,
+  "sampleSize": 2000000,
+  "seed": "gli-1785595944440",
+  "reproduceCommand": "node src/cli.ts --engine=spinny --repo=/opt/ne/sportsbook/mcp/mcp-server/.repo-cache/games/bluestuff-io__smokestack-original-games/BackendEngines/spinny --samples=2000000 --spins=10000000 --replicates=5 --seed=gli-1785595944440",
+  "collectiveEvaluation": {
+    "confidenceLevel": 0.99,
+    "alpha": 0.010000000000000009,
+    "method": "holm-bonferroni",
+    "rejected": [],
+    "thresholds": [
+      {
+        "test": "overlaps",
+        "pValue": 0.19007905512886206,
+        "threshold": 0.003333333333333336,
+        "rejected": false
+      },
+      {
+        "test": "serial-correlation",
+        "pValue": 0.2512989571866936,
+        "threshold": 0.0050000000000000044,
+        "rejected": false
+      },
+      {
+        "test": "interplay-correlation",
+        "pValue": 0.9130678566253355,
+        "threshold": 0.010000000000000009,
+        "rejected": false
+      }
+    ],
+    "fisherCombinedP": 0.3941961425378131,
+    "passed": true
+  },
+  "tests": [
+    {
+      "test": "overlaps",
+      "gliRef": "b",
+      "statistic": 13.639501607552065,
+      "degreesOfFreedom": 10,
+      "pValue": 0.19007905512886206,
+      "sampleSize": 10000000,
+      "detail": {
+        "combination": "fisher-across-replicates",
+        "replicates": 5,
+        "minReplicateP": 0.054082633427236335,
+        "maxReplicateP": 0.966996188956497
+      }
+    },
+    {
+      "test": "interplay-correlation",
+      "gliRef": "e",
+      "statistic": 4.653893493791669,
+      "degreesOfFreedom": 10,
+      "pValue": 0.9130678566253355,
+      "sampleSize": 200000,
+      "detail": {
+        "combination": "fisher-across-replicates",
+        "replicates": 5,
+        "minReplicateP": 0.2476405120705452,
+        "maxReplicateP": 1
+      }
+    },
+    {
+      "test": "serial-correlation",
+      "gliRef": "f",
+      "statistic": 12.527548075522315,
+      "degreesOfFreedom": 10,
+      "pValue": 0.2512989571866936,
+      "sampleSize": 10000000,
+      "detail": {
+        "combination": "fisher-across-replicates",
+        "replicates": 5,
+        "minReplicateP": 0.1168354167762345,
+        "maxReplicateP": 1
+      }
+    }
+  ],
+  "generatedAt": "2026-08-01T14:53:18.330Z"
+}
