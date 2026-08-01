@@ -1,0 +1,45 @@
+{
+  "reportEngine": "spinny",
+  "standard": "GLI-19 v3.0",
+  "runId": "90d9a939-9935-4be8-a03d-2c52a2ac9531",
+  "clauseId": "3.2.3",
+  "verdict": "PASS",
+  "plainStatement": "RNG output is uniformly distributed (float 32-bin: Fisher chi-square = 22.69, p = 0.0119; int 64-range: p = 0.1000).",
+  "headlineStatistic": 22.694085777509905,
+  "pValue": 0.011933854952174522,
+  "confidenceLevel": 0.99,
+  "sampleSize": 10000000,
+  "seed": "gli-1785595944440",
+  "reproduceCommand": "node src/cli.ts --engine=spinny --repo=/opt/ne/sportsbook/mcp/mcp-server/.repo-cache/games/bluestuff-io__smokestack-original-games/BackendEngines/spinny --samples=2000000 --spins=10000000 --replicates=5 --seed=gli-1785595944440",
+  "collectiveEvaluation": null,
+  "tests": [
+    {
+      "test": "chi-square",
+      "gliRef": "a",
+      "statistic": 22.694085777509905,
+      "degreesOfFreedom": 10,
+      "pValue": 0.011933854952174522,
+      "sampleSize": 10000000,
+      "detail": {
+        "combination": "fisher-across-replicates",
+        "replicates": 5,
+        "minReplicateP": 0.03181846997048337,
+        "maxReplicateP": 0.33201253502207795
+      }
+    },
+    {
+      "test": "chi-square",
+      "gliRef": "a",
+      "statistic": 77.748416,
+      "degreesOfFreedom": 63,
+      "pValue": 0.09995880125924118,
+      "sampleSize": 2000000,
+      "detail": {
+        "alphabet": 64,
+        "distribution": "uniform",
+        "minExpectedCount": 31250
+      }
+    }
+  ],
+  "generatedAt": "2026-08-01T14:52:51.827Z"
+}
