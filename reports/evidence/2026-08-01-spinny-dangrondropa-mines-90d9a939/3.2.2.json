@@ -1,0 +1,167 @@
+{
+  "reportEngine": "spinny",
+  "standard": "GLI-19 v3.0",
+  "runId": "90d9a939-9935-4be8-a03d-2c52a2ac9531",
+  "clauseId": "3.2.2",
+  "verdict": "PASS",
+  "plainStatement": "Shared RNG source (crypto-backed, used by every engine on this template). float() scaled to 32 bins, 5 independent draws combined by Fisher's method. 7 of the 7 tests named in §3.2.2 applied. None rejected at the 99% family-wise confidence level (Holm–Bonferroni; Fisher combined p = 1.047e-1).",
+  "headlineStatistic": 22.694085777509905,
+  "pValue": 0.011933854952174522,
+  "confidenceLevel": 0.99,
+  "sampleSize": 10000000,
+  "seed": "gli-1785595944440",
+  "reproduceCommand": "node src/cli.ts --engine=spinny --repo=/opt/ne/sportsbook/mcp/mcp-server/.repo-cache/games/bluestuff-io__smokestack-original-games/BackendEngines/spinny --samples=2000000 --spins=10000000 --replicates=5 --seed=gli-1785595944440",
+  "collectiveEvaluation": {
+    "confidenceLevel": 0.99,
+    "alpha": 0.010000000000000009,
+    "method": "holm-bonferroni",
+    "rejected": [],
+    "thresholds": [
+      {
+        "test": "chi-square",
+        "pValue": 0.011933854952174522,
+        "threshold": 0.0014285714285714299,
+        "rejected": false
+      },
+      {
+        "test": "overlaps",
+        "pValue": 0.19007905512886206,
+        "threshold": 0.001666666666666668,
+        "rejected": false
+      },
+      {
+        "test": "duplicates",
+        "pValue": 0.23004693192339723,
+        "threshold": 0.0020000000000000018,
+        "rejected": false
+      },
+      {
+        "test": "coupon-collector",
+        "pValue": 0.2505933279551336,
+        "threshold": 0.0025000000000000022,
+        "rejected": false
+      },
+      {
+        "test": "serial-correlation",
+        "pValue": 0.2512989571866936,
+        "threshold": 0.003333333333333336,
+        "rejected": false
+      },
+      {
+        "test": "interplay-correlation",
+        "pValue": 0.9130678566253355,
+        "threshold": 0.0050000000000000044,
+        "rejected": false
+      },
+      {
+        "test": "runs",
+        "pValue": 0.974329772848963,
+        "threshold": 0.010000000000000009,
+        "rejected": false
+      }
+    ],
+    "fisherCombinedP": 0.1047395388048599,
+    "passed": true
+  },
+  "tests": [
+    {
+      "test": "chi-square",
+      "gliRef": "a",
+      "statistic": 22.694085777509905,
+      "degreesOfFreedom": 10,
+      "pValue": 0.011933854952174522,
+      "sampleSize": 10000000,
+      "detail": {
+        "combination": "fisher-across-replicates",
+        "replicates": 5,
+        "minReplicateP": 0.03181846997048337,
+        "maxReplicateP": 0.33201253502207795
+      }
+    },
+    {
+      "test": "overlaps",
+      "gliRef": "b",
+      "statistic": 13.639501607552065,
+      "degreesOfFreedom": 10,
+      "pValue": 0.19007905512886206,
+      "sampleSize": 10000000,
+      "detail": {
+        "combination": "fisher-across-replicates",
+        "replicates": 5,
+        "minReplicateP": 0.054082633427236335,
+        "maxReplicateP": 0.966996188956497
+      }
+    },
+    {
+      "test": "coupon-collector",
+      "gliRef": "c",
+      "statistic": 12.539115856340953,
+      "degreesOfFreedom": 10,
+      "pValue": 0.2505933279551336,
+      "sampleSize": 10000000,
+      "detail": {
+        "combination": "fisher-across-replicates",
+        "replicates": 5,
+        "minReplicateP": 0.03664611870047232,
+        "maxReplicateP": 0.7030088006461579
+      }
+    },
+    {
+      "test": "runs",
+      "gliRef": "d",
+      "statistic": 3.27025631594431,
+      "degreesOfFreedom": 10,
+      "pValue": 0.974329772848963,
+      "sampleSize": 10000000,
+      "detail": {
+        "combination": "fisher-across-replicates",
+        "replicates": 5,
+        "minReplicateP": 0.4606243154220635,
+        "maxReplicateP": 0.946033233837557
+      }
+    },
+    {
+      "test": "interplay-correlation",
+      "gliRef": "e",
+      "statistic": 4.653893493791669,
+      "degreesOfFreedom": 10,
+      "pValue": 0.9130678566253355,
+      "sampleSize": 200000,
+      "detail": {
+        "combination": "fisher-across-replicates",
+        "replicates": 5,
+        "minReplicateP": 0.2476405120705452,
+        "maxReplicateP": 1
+      }
+    },
+    {
+      "test": "serial-correlation",
+      "gliRef": "f",
+      "statistic": 12.527548075522315,
+      "degreesOfFreedom": 10,
+      "pValue": 0.2512989571866936,
+      "sampleSize": 10000000,
+      "detail": {
+        "combination": "fisher-across-replicates",
+        "replicates": 5,
+        "minReplicateP": 0.1168354167762345,
+        "maxReplicateP": 1
+      }
+    },
+    {
+      "test": "duplicates",
+      "gliRef": "g",
+      "statistic": 12.887204124985352,
+      "degreesOfFreedom": 10,
+      "pValue": 0.23004693192339723,
+      "sampleSize": 9999990,
+      "detail": {
+        "combination": "fisher-across-replicates",
+        "replicates": 5,
+        "minReplicateP": 0.1442037518333107,
+        "maxReplicateP": 0.753997702585466
+      }
+    }
+  ],
+  "generatedAt": "2026-08-01T14:52:51.826Z"
+}
