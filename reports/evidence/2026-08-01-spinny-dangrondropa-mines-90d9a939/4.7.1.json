@@ -1,0 +1,17 @@
+{
+  "reportEngine": "spinny",
+  "standard": "GLI-19 v3.0",
+  "runId": "90d9a939-9935-4be8-a03d-2c52a2ac9531",
+  "clauseId": "4.7.1",
+  "verdict": "MANUAL",
+  "plainStatement": "Return-to-player measured per registered engine by driving play() with the template RNG:\n  • example: no payouts observed over 10,000,000 spins — stub or non-payout engine; nothing to certify.\nNo registered engine produced payouts — this backend has no certifiable game math yet. (1 non-payout/stub engine(s) noted above.)",
+  "headlineStatistic": null,
+  "pValue": null,
+  "confidenceLevel": 0.99,
+  "sampleSize": 10000000,
+  "seed": "gli-1785595944440",
+  "reproduceCommand": "node src/cli.ts --engine=spinny --repo=/opt/ne/sportsbook/mcp/mcp-server/.repo-cache/games/bluestuff-io__smokestack-original-games/BackendEngines/spinny --samples=2000000 --spins=10000000 --replicates=5 --seed=gli-1785595944440",
+  "collectiveEvaluation": null,
+  "tests": [],
+  "generatedAt": "2026-08-01T14:53:18.345Z"
+}
