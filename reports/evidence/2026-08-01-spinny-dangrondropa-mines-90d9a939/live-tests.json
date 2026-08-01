@@ -1,0 +1,6 @@
+{
+  "ran": false,
+  "reason": "The deployed backend at https://smokestack-spinny-backend-stg.bluestufftech.com was not reachable (no /health), so live testing was skipped.",
+  "backendUrl": "https://smokestack-spinny-backend-stg.bluestufftech.com",
+  "generatedAt": "2026-08-01T14:53:19.040Z"
+}
